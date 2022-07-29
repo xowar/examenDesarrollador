@@ -13,6 +13,11 @@
 				<input type="submit" name="">
 			</form>
 		</div>
+	
+		<h4>Aplicación web en Javascript</h4>
+		<div class="app"></div>
+		
+		<script src="js/javascript_rest.js" type="module"></script>
 	</body>
 </html>
 
