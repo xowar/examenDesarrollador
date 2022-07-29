@@ -8,13 +8,11 @@
 	</head>
 	<body>
 		<div>
-			<form method="GET" action="">
+			<form method="GET" action="controller/php_rest.php">
 				<h4>Aplicación web en PHP</h4>
 				<input type="submit" name="">
 			</form>
 		</div>
-
-
 	</body>
 </html>
 
