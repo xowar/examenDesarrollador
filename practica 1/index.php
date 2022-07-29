@@ -8,13 +8,16 @@
 	</head>
 	<body>
 		<div>
-			<form method="GET" action="">
+			<form method="GET" action="controller/php_rest.php">
 				<h4>Aplicación web en PHP</h4>
 				<input type="submit" name="">
 			</form>
 		</div>
-
-
+	
+		<h4>Aplicación web en Javascript</h4>
+		<div class="app"></div>
+		
+		<script src="js/javascript_rest.js" type="module"></script>
 	</body>
 </html>
 
