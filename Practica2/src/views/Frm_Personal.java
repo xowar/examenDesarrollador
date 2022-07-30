@@ -1,11 +1,16 @@
 
 package views;
 
+import controllers.Cls_Personal;
+
 
 public class Frm_Personal extends javax.swing.JFrame {
 
+    final private Cls_Personal CP;
+        
     public Frm_Personal() {
         initComponents();
+        CP = new Cls_Personal();
     }
 
     @SuppressWarnings("unchecked")
@@ -111,11 +116,11 @@ public class Frm_Personal extends javax.swing.JFrame {
                                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtf_numero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jtf_colonia, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                                    .addComponent(jtf_calle)))
+                                    .addComponent(jtf_calle)
+                                    .addComponent(jtf_numero, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jtf_id, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,11 +207,35 @@ public class Frm_Personal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtf_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_idActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jtf_idActionPerformed
 
     private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
-        // TODO add your handling code here:
+
+        
+        String id = jtf_id.getText(); 
+        String nombre = jtf_nombre.getText(); 
+        String appaterno = jtf_appaterno.getText(); 
+        String apmaterno = jtf_apmaterno.getText(); 
+        
+        String calle = jtf_calle.getText(); 
+        String numero = jtf_numero.getText(); 
+        String colonia = jtf_colonia.getText();
+        
+
+       
+        CP.insertDatosPersons(id, nombre, appaterno, apmaterno);
+        CP.insertDatosAddresses(id, calle, numero, colonia);
+        CP.insertDatosDistributors(id);
+        
+        jtf_id.setText(null);
+        jtf_nombre.setText(null);
+        jtf_appaterno.setText(null);
+        jtf_apmaterno.setText(null);
+        
+        jtf_calle.setText(null);
+        jtf_numero.setText(null);
+        jtf_colonia.setText(null);
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     /**
